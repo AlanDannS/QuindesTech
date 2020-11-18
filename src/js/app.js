@@ -1,3 +1,10 @@
+const btnSwitch = document.querySelector('#switch');
+btnSwitch.addEventListener('click', ()=>{
+	document.body.classList.toggle('dark');
+	btnSwitch.classList.toggle('active')
+})
+
+
 const typed = new Typed('.typed',{
     strings: [
         '<i>Web</i>',
@@ -16,3 +23,6 @@ const typed = new Typed('.typed',{
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
+
+
+

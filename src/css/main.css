@@ -7,14 +7,19 @@
 
 :root{
     --fondo_claro:#fff;
-    --fondo_oscuro:#0C2B3D;
+    --fondo_oscuro:#111111;
+    --fondo_oscuroC: #222222;
     --azul_claro: #2997D7;
     --azul_fuerte: #217ACD;
+    --shadow-claro:9px 11px 22px 2px #4A4A4A;
+    --shadow-dark: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 body{
     background: var(--fondo_claro);
     font-family: 'Lato', sans-serif;
+    cursor: default;
+    transition: .3s ease all;
 }
 
 /* ScrollBar */
@@ -40,6 +45,21 @@ body::-webkit-scrollbar {
 
 }
 
+body.dark{
+    background: var(--fondo_oscuro);
+    transition: .3s ease all;
+}
+
+body.dark::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+
+body.dark::-webkit-scrollbar-thumb {
+    background-color: var(--azul_claro);
+    outline: 1px solid slategrey;
+  }
+
+
 /* Main */
 
 main{
@@ -61,11 +81,60 @@ main h2{
     border-bottom: 3px solid var(--azul_fuerte);
 }
 
-/* Bienvenida */
+/* Tema oscuro */
 
-main .inicio{
+.switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    margin: 25% 0 0 0;
+}
+
+.switch::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active{
+    background: orange;
+    color: "000";
+}
+
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+.switch span{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/* Header */
+
+.inicio{
     width: 100%;
+    max-width: 1600px;
     height: 100vh;
+    margin: 0 auto;
     background: linear-gradient(to right, #00f26080, #0575e680),
      url('../img/inicio.jpg') no-repeat;
     background-position: center;
@@ -74,14 +143,14 @@ main .inicio{
     text-align: center;
 }
 
-main .inicio .texto{
+.inicio .texto{
     color: #fff;
     width: 60%;
     height: 60%;
     margin: auto;
 }
 
-main .inicio .texto p{
+.inicio .texto p{
     width: 100%;
     height: auto;
     padding: 25% 0 5% 0;
@@ -89,7 +158,7 @@ main .inicio .texto p{
     font-size: 60px;
 }
 
-main .inicio .extra{
+.inicio .extra{
     border: 2px solid #fff;
     border-radius: 30px;
     width: 200px;
@@ -98,14 +167,14 @@ main .inicio .extra{
     font-size: 25px;
 }
 
-main .inicio .extra:hover{
+.inicio .extra:hover{
     border: none;
     width: 210px;
     height: 60px;
     color: #fff;
     font-size: 30;
     background: var(--azul_claro);
-    box-shadow: 0px 12px 25px 6px #000;
+    box-shadow: var(--shadow-claro);
 }
 
 /* Servicos */
@@ -124,7 +193,8 @@ main .servicios{
 main .servicios .target-service{
     width: 20%;
     height: 350px;
-    box-shadow: 9px 11px 22px 2px #4A4A4A;
+    background: #fff;
+    box-shadow: var(--shadow-claro);
     border-radius: 30px;
     text-align: center;
     transition: .3s;
@@ -140,6 +210,23 @@ main .servicios .target-service:hover{
     /* transform: translate(-96px, -120px) rotate(45deg) */
     
 }
+
+body.dark main .servicios .target-service{
+    background: var(--fondo_oscuroC);
+    color: #fff;
+    box-shadow: var(--shadow-dark);
+}
+
+body.dark main .servicios .target-service:hover{
+    width: 21%;
+    height: 360px;
+    background: var(--azul_fuerte);
+    color: #fff;
+    transition: .3s;
+    /* transform: translate(-96px, -120px) rotate(45deg) */
+    
+}
+
 
 main .servicios .target-service .imagen{
     width: 90;
@@ -183,10 +270,18 @@ main .tecnologias{
 main .tecnologias .card_tecnologias{
     width: 160px;
     height: 160px;
-    margin: 30px 10px 25px 10px;
+    margin: 40px 10px 30px 10px;
     text-align: center;
     border-radius: 30px;
-    box-shadow: 9px 11px 22px 2px #4A4A4A;
+    box-shadow: var(--shadow-claro);
+    transition: .3s;
+}
+
+body.dark main .tecnologias .card_tecnologias{
+    background: var(--fondo_oscuroC);
+    box-shadow: var(--shadow-dark);
+    color: #fff;
+    transition: .3s;
 }
 
 main .tecnologias .card_tecnologias i{
@@ -229,22 +324,31 @@ main .tecnologias .card_tecnologias:nth-child(7) i{
 main .tecnologias .card_tecnologias:hover{
     background: var(--azul_claro);
     color: #fff;
+    transition: .3s;
+}
+
+body.dark main .tecnologias .card_tecnologias:hover{
+    background: var(--azul_claro);
+    color: #fff;
+    transition: .3s;
 }
 
 main .tecnologias .card_tecnologias:hover i{
     margin-top: 20px;
     font-size: 90px;
     color: #fff;
+    transition: .3s;
 }
 
 /* Proyectos */
 
 main .proyectos{
     width: 100%;
-    height: 400px;
+    height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Card Proyectos */
@@ -252,19 +356,30 @@ main .proyectos{
 main .proyectos .card{
     height: 250px;
     width: 400px;
-    margin: auto;
+    margin: 25px 25px;
     text-align: center;
     overflow: hidden;
     border-radius: 10px;
     border: transparent;
-    box-shadow: 9px 11px 22px 2px #4A4A4A;
+    box-shadow: var(--shadow-claro);
     transition: .3s;
+}
+
+body.dark main .proyectos .card{
+    background: var(--fondo_oscuroC);
+    box-shadow: var(--shadow-dark);
 }
 
 main .proyectos .card:hover{
     height: 300px;
     width: 400px;
     transition: .3s;
+}
+
+main .proyectos .card .card-encabezado{
+    height: 250px;
+    width: 400px;
+
 }
 
 main .proyectos .card .card-encabezado img{
@@ -280,6 +395,10 @@ main .proyectos .card .card-icono{
     width: 400px;
     display: flex;
     align-items: center;
+}
+
+body.dark main .proyectos .card .card-icono .agrandar a{
+    color: #fff;
 }
 
 main .proyectos .card .card-icono .agrandar{
@@ -303,4 +422,35 @@ transition: .3s;
 main  .proyectos .card .card-icono .agrandar a{
     text-decoration: none;
     color:inherit;
+}
+
+main  .proyectos .card .card-icono .agrandar a:hover{
+    text-shadow: 4px 4px 16px rgba(255, 255, 255, 0.55);
+}
+
+.seccion-btn{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+.btn-mas{
+    width: 200px;
+    height: 40px;
+    display: 10px auto;
+    background: var(--azul_claro);
+    border-radius:30px;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.btn-mas:hover{
+    width: 210px;
+    height: 50px;
+    font-size: 30px;
+    box-shadow: var(--shadow-claro);
+}
+
+body.dark .btn-mas:hover{
+    box-shadow: var(--shadow-dark);
 }
