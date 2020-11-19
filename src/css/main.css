@@ -28,11 +28,11 @@ body::-webkit-scrollbar {
     width: .5em;
   }
    
-  body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
    
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: var(--fondo_oscuro);
     outline: 1px solid slategrey;
   }
@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
     background: var(--azul_fuerte) !important;
     color: #fff;
     position: fixed;
+    z-index: 2;
 
 }
 
@@ -344,7 +345,8 @@ main .tecnologias .card_tecnologias:hover i{
 
 main .proyectos{
     width: 100%;
-    height: 450px;
+    height: auto;
+    min-height: 550px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -363,6 +365,7 @@ main .proyectos .card{
     border: transparent;
     box-shadow: var(--shadow-claro);
     transition: .3s;
+    z-index: 1;
 }
 
 body.dark main .proyectos .card{
@@ -395,10 +398,6 @@ main .proyectos .card .card-icono{
     width: 400px;
     display: flex;
     align-items: center;
-}
-
-body.dark main .proyectos .card .card-icono .agrandar a{
-    color: #fff;
 }
 
 main .proyectos .card .card-icono .agrandar{
@@ -453,4 +452,62 @@ main  .proyectos .card .card-icono .agrandar a:hover{
 
 body.dark .btn-mas:hover{
     box-shadow: var(--shadow-dark);
+}
+
+/* Seccion de contacto */
+
+.contacto{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fondo_oscuroC);
+}
+
+.contacto a{
+    width: 60px;
+    height: 60px;
+    margin: 20px 30px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.contacto a i{
+    font-size: 40px;
+    margin: 10px 0 10px 0;
+}
+
+.contacto a:hover{
+    background: var(--azul_claro);
+    color: #fff;
+}
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 110px;
+    background: var(--fondo_oscuroC);
+}
+
+footer .legal{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .legal a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+footer .legal a:hover{
+    color: var(--azul_claro);
+}
+
+footer .made p{
+    color: #fff;
 }
