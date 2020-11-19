@@ -182,11 +182,10 @@ main h2{
 
 main .servicios{
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-shrink: 0;
     flex-wrap: wrap;
 }
 
@@ -194,6 +193,7 @@ main .servicios{
 main .servicios .target-service{
     width: 20%;
     height: 350px;
+    margin: 20px auto 20px auto;
     background: #fff;
     box-shadow: var(--shadow-claro);
     border-radius: 30px;
@@ -219,8 +219,6 @@ body.dark main .servicios .target-service{
 }
 
 body.dark main .servicios .target-service:hover{
-    width: 21%;
-    height: 360px;
     background: var(--azul_fuerte);
     color: #fff;
     transition: .3s;
@@ -432,6 +430,7 @@ main  .proyectos .card .card-icono .agrandar a:hover{
     height: 80px;
     text-align: center;
 }
+
 .btn-mas{
     width: 200px;
     height: 40px;
@@ -510,4 +509,150 @@ footer .legal a:hover{
 
 footer .made p{
     color: #fff;
+}
+
+@media (max-width: 900px ){
+
+    main .servicios{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    /* Servicios Tarjeta */
+    main .servicios .target-service{
+        width: 30%;
+        /* transform: translate(-96px, -120px) rotate(45deg) */
+    }
+
+    main .proyectos .card{
+        margin: 10px auto;
+    }
+
+    main .servicios .target-service:hover{
+        width: 31%;
+        height: 360px;
+        background: var(--azul_fuerte);
+        color: #fff;
+        transition: .3s;
+        /* transform: translate(-96px, -120px) rotate(45deg) */
+        
+    }
+}
+
+@media (max-width: 768px ){
+    /* Header */
+    .inicio{
+        background-position: center;
+        background-size: 200vw;
+    }
+    
+    .inicio .texto{
+        color: #fff;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+    }
+    
+    .inicio .texto p{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .inicio .extra{
+        border: 2px solid #fff;
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        font-size: 25px;
+    }
+
+    /* Tecnologias */
+    main .tecnologias .card_tecnologias{
+        width: 100px;
+        height: 100px;
+        margin: 40px 10px 30px 10px;
+    }
+    
+    main .tecnologias .card_tecnologias i{
+        margin-top: 20px;
+        font-size: 45px;
+    }
+    
+    main .tecnologias .card_tecnologias p{
+        font-size: 15px;
+    }
+
+    main .tecnologias .card_tecnologias:hover{
+        background: var(--azul_claro);
+        color: #fff;
+        transition: .3s;
+    }
+
+    main .tecnologias .card_tecnologias:hover i{
+        margin-top: 20px;
+        font-size: 45px;
+    }
+    .seccion-btn{
+        height: auto;
+    }
+
+    .btn-mas{
+        margin: 40px auto 20px auto;
+    }
+}
+
+@media ( max-width:425px){    
+    .inicio{
+        background-size: 200vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .inicio .texto{
+        width: 80vw;
+        height: 50vh;
+    }
+    
+    .inicio .texto p{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 35px;
+    }
+    
+    .inicio .extra{
+        border: 2px solid #fff;
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        font-size: 25px;
+    }
+
+    .extra{
+        display: none;
+    }
+
+    main .servicios .target-service{
+        width: 60%;
+        /* transform: translate(-96px, -120px) rotate(45deg) */
+    }
+    main .servicios .target-service:hover{
+        width: 61%;
+    }
+
+    footer .legal a{
+        width: 80%;
+        height: 30px;
+        font-size: 18px;
+    }
 }
