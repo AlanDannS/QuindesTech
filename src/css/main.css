@@ -485,7 +485,9 @@ body.dark .btn-mas:hover{
 
 footer{
     width: 100%;
+    max-width: 1600px;
     height: 110px;
+    margin: auto;
     background: var(--fondo_oscuroC);
 }
 
