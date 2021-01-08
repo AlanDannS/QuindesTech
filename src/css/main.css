@@ -159,7 +159,7 @@ main h2{
     font-size: 60px;
 }
 
-.inicio .extra{
+.extra{
     border: 2px solid #fff;
     border-radius: 30px;
     width: 200px;
@@ -510,7 +510,93 @@ footer .legal a:hover{
 }
 
 footer .made p{
+    margin-left: 20px;
     color: #fff;
+}
+
+/* Servicios */
+.servicios .objetivo{
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios .objetivo .texto{
+    width: 50%;
+}
+
+.servicios .objetivo .texto h3{
+    margin-left: 50px;
+}
+.servicios .objetivo .texto p{
+    width: 70%;
+    margin-left: 50px;
+}
+
+.servicios .objetivo .texto .extra{
+    margin-left: 50px;
+}
+
+.servicios .objetivo .imagen{
+    width: 50%;
+    text-align: center;
+}
+
+.servicios .objetivo .imagen img{
+    width: 60%;
+    border-radius: 30px;
+}
+
+
+/* Contacto */
+.img-contacto{
+    width: 100%;
+    max-width: 1600px;
+    height: 250px;
+    background: linear-gradient(to right, #00f26080, #0575e680),
+    url('../img/contact_img.jpg') no-repeat;
+    background-position: center;
+    background-size: 100vw;
+    background-attachment: fixed;
+}
+
+.img-contacto h3{
+    margin:0 0 0 200px;
+    font-size: 60px;
+    color: #fff;
+}
+
+.formulario-gps{
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    height: auto;
+    display: flex;
+}
+
+.formulario-gps form{
+    width: 50%;
+    text-align: center;
+}
+
+.formulario-gps form label{
+    color: var(--azul_fuerte);
+    font-size: 24px;
+}
+
+.formulario-gps input, .formulario-gps textarea{
+    border-radius: 25px;
+    border: 2px solid var(--azul_fuerte);
+    background: #217acdbf;
+    color: #fff;
+}
+.formulario-gps .ubicacion{
+    width: 50%;
 }
 
 @media (max-width: 900px ){
@@ -607,6 +693,40 @@ footer .made p{
 
     .btn-mas{
         margin: 40px auto 20px auto;
+    }
+
+    /* Servicios */
+    .servicios .objetivo{
+        display: block;
+    }
+
+    .servicios .objetivo .texto{
+        width: 100%;
+    }
+
+    
+    .servicios .objetivo .imagen{
+        width: 100%;
+        margin-top: 30p;
+        text-align: center;
+    }
+    
+    .servicios .objetivo .imagen img{
+        width: 60%;
+        border-radius: 30px;
+    }
+
+    .formulario-gps{
+        display: block;
+    }
+
+    .formulario-gps form{
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario-gps .ubicacion{
+        width: 100%;
     }
 }
 

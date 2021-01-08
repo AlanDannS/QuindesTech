@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripcion" content="desarrollo de software">
-    <meta name="keywords" content="quindes,quindestech,tech,desarrollo movil,desarrollo web,responsive design,portafolio web,ecommerce,desarrollo movil">
-    <title>QuindesTech</title>
+    <title>Servicios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
@@ -25,11 +23,11 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
+              <a class="nav-link active" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="proyectos.html">Proyectos</a>
@@ -50,17 +48,25 @@
           </ul>
         </div>
     </nav>
+    <br><br>
+    <main class="servicios">
+        <h2>Servicios</h2>
 
-    <header class="inicio">
-        <div class="texto">
-            <h1><p>Hacemos <strong>Desarrollo <span class="typed"></span></strong></p></h1>
-        </div>
-        <button onclick="location.href='contacto.html'" class="extra">Contactanos!</button>
-    </header>
+        <section class="objetivo">
+            <div class="texto">
+                <h3>Objetivo</h3>
+                <p>Ofrecer una gran variedad de sevicios para tu 
+                    negocio a pecios accesibles para que puedas 
+                    llevar tu negocio al siguiente nivel.
+                    <br>
+                    Contactanos para mas informacion </p>
+                    <button onclick="location.href='contacto.html'" class="extra">Contactanos!</button>
+            </div>
+            <div class="imagen">
+                <img src="src/img/flat-devices-mockup.png" alt="">
+            </div>
+        </section>
 
-    <main>
-
-        <h2 id="servicios">Servicios</h2>
 
         <section class="servicios">
             <div class="target-service">
@@ -106,91 +112,6 @@
                 </div>
             </div>
 
-            <div class="seccion-btn">
-                <button OnClick="location.href='servicios.html'" class="btn-mas">Ver Mas</button>
-            </div>
-        </section>
-
-        <h2>Tecnologias</h2>
-
-        <section class="tecnologias">
-            <div class="card_tecnologias">
-                <i class="fab fa-html5"></i>
-                <p>HTML5</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fab fa-css3"></i>
-                <p>CSS3</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fab fa-js-square"></i>
-                <p>Javascript</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fab fa-php"></i>
-                <p>PHP</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fas fa-database"></i>
-                <p>MySql</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-            </div>
-
-            <div class="card_tecnologias">
-                <i class="fab fa-node"></i>
-                <p>Node Js</p>
-            </div>
-        </section>
-
-        <h2 id="proyectos">Proyectos</h2>
-
-        <section class="proyectos">
-            
-            <article class="card">
-                <div class="card-encabezado">
-                    <img src="src/img/rick_and_morty.png" alt="">
-                </div>
-
-                <div class="card-icono">
-                    <li class="agrandar"><a href="#"><i class="fas fa-plus"></i></a></li>
-                    <li class="agrandar"><a href="https://alandanns.github.io/APIRick-Morty/" target="_blank"><i class="fas fa-link"></i></a></li>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-encabezado">
-                    <img src="src/img/password_generator.png" alt="">
-                </div>
-
-                <div class="card-icono">
-                    <li class="agrandar"><a href="#"><i class="fas fa-plus"></i></a></li>
-                    <li class="agrandar"><a href="https://alandanns.github.io/PasswordGenerator/" target="_blank"><i class="fas fa-link"></i></a></li>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-encabezado">
-                    <img src="src/img/blog.png" alt="">
-                </div>
-
-                <div class="card-icono">
-                    <li class="agrandar"><a href="#"><i class="fas fa-plus"></i></a></li>
-                    <li class="agrandar"><a href="https://alandanns.github.io/Blog_Platzi/" target="_blank"><i class="fas fa-link"></i></a></li>
-                </div>
-            </article>
-
-            <div class="seccion-btn">
-                <button OnClick="location.href='proyectos.html'" class="btn-mas">Ver Mas</button>
-            </div>
-        
         </section>
 
         <section id="contacto" class="contacto">
@@ -211,8 +132,6 @@
             <p>Made width <i class="fas fa-heart"></i> for Quindestech.</p>
         </div>
     </footer>
-
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -223,6 +142,5 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <!-- Local -->
     <script src="src/js/app.js"></script>
-
 </body>
 </html>
