@@ -1,0 +1,172 @@
+:root{
+    --color-principal:#C90442;
+    --fondo_oscuro:#111111;
+    --fondo_oscuroC: #222222;
+    --azul_claro: #2997D7;
+    --azul_fuerte: #217ACD;
+    --shadow-claro:9px 11px 22px 2px #4A4A4A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+/* Galeria */
+
+h2{
+ color: var(--azul_fuerte);
+ width: 100%;
+ text-align: center;
+ margin-top: 10px;
+}
+
+.container-grid{
+    display: grid;
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    margin: 10px auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8"
+    "img9 img10 img11 img12"
+    "img13 img14 img15 img16"
+    "img13 img14 img15 img16"
+     ;
+     gap: 8px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.img:hover{
+    filter: grayscale(100%);
+    transition: all .3s ease;
+}
+
+.img-12{
+    grid-area: img1;
+}
+
+.img-2{
+    grid-area: img2;
+}
+
+.img-3{
+    grid-area: img3;
+}
+
+.img-7{
+    grid-area: img4;
+}
+
+.img-8{
+    grid-area: img5;
+}
+
+.img-10{
+    grid-area: img6;
+}
+
+.img-11{
+    grid-area: img7;
+}
+
+.img-4{
+    grid-area: img9;
+}
+
+.img-5{
+    grid-area: img10;
+}
+
+.img-6{
+    grid-area: img11;
+}
+
+.img-9{
+    grid-area: img12;
+}
+
+.img-13{
+    grid-area: img13;
+}
+
+.container-img{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
+}
+
+.container-img p{
+    font-family: var(--fuente);
+    font-size: 25px;
+}
+
+.move{
+    transform: translateX(0);
+    transition: all .3s ease-in;
+}
+
+.img-show{
+    height: 80%;
+    display: block;
+    object-fit: cover;
+    transform: scale(0);
+    transition: all .2s .4;
+}
+
+.show{
+    transform: scale(1);
+    transition: all .5s ease-in; 
+}
+
+.copy{
+    position: fixed;
+    color: #fff;
+    bottom: 40px;
+}
+
+.fa-times{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    color: #fff;
+    top: 60px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+    .img-show{
+        height: auto;
+        width: 80%;
+    }
+
+    .copy{
+        bottom: 20px;
+    }
+
+    .fa-times{
+        top: 10px;
+        font-size: 25px;
+    }
+}
